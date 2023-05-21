@@ -4,7 +4,10 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # User-specific files
+<<<<<<< HEAD
 *__pycache__/
+=======
+>>>>>>> dcbfdadca4cd8b6d29b27a2d0be078406aa27f01
 *.rsuser
 *.suo
 *.user
@@ -397,4 +400,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+<<<<<<< HEAD
 __pycache__/app.cpython-311.pyc
+=======
+>>>>>>> dcbfdadca4cd8b6d29b27a2d0be078406aa27f01
