@@ -1,4 +1,6 @@
 def entidadUsuario(item) -> dict:
+    if item is None:
+        raise ValueError("El objeto 'item' es None.")
     return{
         "id": str(item["_id"]),
         "nombre": item["nombre"],

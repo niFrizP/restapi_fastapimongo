@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Response, status
+from fastapi import APIRouter, Response, status, HTTPException
 from config.db import conx
 from schemas.usuario import entidadUsuario, entidadUsuarios
 from models.usuario import Usuario
@@ -42,4 +42,7 @@ def actualizar_usuario(id: str, usuario: Usuario):
 @usuario.delete('/usuarios/{id}', status_code=status.HTTP_204_NO_CONTENT, tags=["Usuarios"])
 def borrar_usuario(id: str):
     entidadUsuario(conx.local.usuario.find_one_and_delete({"_id": ObjectId(id)}))
+    if usuario is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Usuario no encontrado")
+        entidadUsuario(usuario)
     return Response(status_code=HTTP_204_NO_CONTENT)
